@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>myapp</title> 
+
+ <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />      
+ <link rel="stylesheet" href="css/custom.css" />    
+ <!--You need this although you do not need a physical file as build will inject it in--> <script type="text/javascript" src="cordova.js"></script>  
+ 
+</head>
+
+<body>
+
+<!-- Start of Sports and Societies Page -->
+<div data-role="page" id="sports" data-theme="b">     
+<div data-role="header">
+    	<blockquote>
+        	<h1 class="ui-title" role="heading" aria-level="1">Societies</h1>
+    	</blockquote>
+
+  <div data-role="navbar">           
+  <ul>   
+    <li><a href="#sports" data-transition="slide" data-icon="info">Societies</a></li>       
+  	<li><a href="#map" data-transition="slide" data-icon="navigation">Map</a></li> 
+  	<li><a href="#events" data-transition="slide" data-icon="calendar">Events</a></li>  
+  	<li><a href="#notify" data-transition="slide" data-icon="alert">Alerts</a></li>
+  </ul>         
+  	</div>     
+  	</div>        
+  	
+  	<div data-role="content"> 
+	<div class="sportHeader"><h3> Athletics </h3></div>
+   	<div class="sportImg"><img src="assets/Images/Athletics.jpg" alt="Athletics Image" width="300px" height="200px"></div>
+   	 <div class="sportText"><p> Lincoln University Athletics and Cross Country Club is a great club for everyone. The club is for beginners, intermediate and advanced runners. The club has weekly socials and we train multiple times a week. We aim to build up member's fitness levels so that they can compete, if they wish, in various competitions such as British Universities & College Sport (BUCS) and the Lincoln 10k. </p> </div>     
+    
+    <div class="sportHeader"><h3> Football </h3></div>
+    <div class="sportImg"><img src="assets/Images/Football.jpg" alt="Football Image" width="300px" height="200px"></div>
+    <div class="sportText"><p> The football club is one of the oldest clubs here at the University of Lincoln. The club has three teams, which play within the BUCS leagues on Wednesday afternoons. They are a vital part of the sports and societies office and most of the teams are highly ranked within the BUCS leagues playing against the best universities in the country. As well as regular post-match nights out the club hosts a number of social events throughout the year. </p></div>
+    
+     <div class="sportHeader"><h3> Computer Science </h3></div>
+     <div class="sportImg"><img src="assets/Images/CompSci.jpg" alt="Keyboard Image" width="300px" height="200px"></div>
+     <div class="sportText"><p> We are the Computer Science Society. We hold weekly meetings covering topics such as Linux, Python and Discord Botting. we also run larger events like Game Jams and Hachathons. If you are interested in computers, we are the society for you! </p></div>
+    
+    <div class="sportHeader"><h3> Comedy </h3></div>
+     <div class="sportImg"><img src="assets/Images/Comedy.jpg" alt="Comedy Image" width="300px" height="200px"></div>
+     <div class="sportText"><p> The Comedy Society is a relaxed and friendly society for people who want to get involved in stand-up and other forms of comedy. In our weekly meetings we talk about comedy, rip-off panel shows, and work on our stand-up routines. We also host free comedy gigs, which anyone is welcome to attend. Our current meeting time and location is 6:30 every Tuesday in MB2602. </p></div>
+    
+    </div>
+    
+  	</div> 
+  	
+  
+<!-- /page -->  
+
+<!-- Start of Map Page page -->
+<div data-role="page" id="map" data-theme="b">     
+<div data-role="header">
+    	<blockquote>
+			<div class="backbtn"><div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline" data-rel="back">Button</a></div></div>
+        	<h1 class="ui-title" role="heading" aria-level="1">Map</h1>
+    	</blockquote>
+
+  <div data-role="navbar">           
+  <ul> 
+    <li><a href="#sports" data-transition="slide" data-icon="info">Societies</a></li>                   
+  	<li><a href="#map" data-transition="slide" data-icon="navigation">Map</a></li> 
+  	<li><a href="#events" data-transition="slide" data-icon="calendar">Events</a></li>  
+  	<li><a href="#notify" data-transition="slide" data-icon="alert">Alerts</a></li>
+  </ul>         
+  	</div>     
+  	</div>        
+  	
+  	<div data-role="content"> 
+ 		 <div id="map-canvas"></div>
+ 		 
+ 	 <form>
+		<div class="ui-field-contain">
+    		<select name="select-native-4" id="select-native-4">
+        		<option>Select a Society or a Sport</option>
+					<option value="1">Athletics</option>
+            		<option value="2">Football</option>
+            		<option value="3">Computer Science</option>
+            		<option value="4">Comedy</option>
+   			 </select>
+		</div>
+	</form>
+	
+<!--	 <button id="delete">athletics</button>-->
+	</div> 
+
+ <div id="mapFooter" data-role="footer" data-position="fixed"> 
+
+	<div class="locationbtn"><div class="ui-block-b"><button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" id="locateMe">location</button></div></div> 
+	 
+ </div>		
+							
+  	</div> 
+  	
+
+	
+<!-- /page -->  
+
+<!-- Start of Events Page page -->
+<div data-role="page" id="events" data-theme="b">     
+<div data-role="header">
+    	<blockquote>
+			<div class="backbtn"><div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline" data-rel="back">Button</a></div></div>
+        	<h1 class="ui-title" role="heading" aria-level="1">Events</h1>
+    	</blockquote>
+
+  <div data-role="navbar">           
+  <ul>        
+    <li><a href="#sports" data-transition="slide" data-icon="info">Societies</a></li>            
+  	<li><a href="#map" data-transition="slide" data-icon="navigation">Map</a></li> 
+  	<li><a href="#events" data-transition="slide" data-icon="calendar">Events</a></li>  
+  	<li><a href="#notify" data-transition="slide" data-icon="alert">Alerts</a></li>
+  </ul>         
+  	</div>     
+  	</div>     
+  	
+ <div data-role="content">
+  	<div class="eventsbtn">
+   	<div class="ui-grid-b ui-responsive">
+    <div class="ui-block-a"><a href="#" class="ui-btn ui-shadow ui-corner-all" data-icon="arrow-d" onclick="mondayText()">Monday</a></div>
+	</div>
+	</div>
+	
+	<div id="mondaytxt" style="display: none">
+ 	<p><u>Athletics - Casual Run:</u></p>
+ 	<p> <u>Where:</u> Engine Shed </p>
+ 	<p> <u> When:</u> 5pm </p>
+ 	<p> <u>info:</u> Every Monday Athletics hold a causal run for all types of runners, from beginners to advanced runners. On mondays we usually run 5km, through different routes.</p>
+ 	<a href="#map"><div class="mapbtn"><div class="ui-block-b"><button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" id="#map">Map</button></div> </div></a>
+ 	<br> <br> <br> 
+	</div>
+	
+	
+	<div class="eventsbtn">
+   	<div class="ui-grid-b ui-responsive">
+    <div class="ui-block-a"><a href="#" class="ui-btn ui-shadow ui-corner-all" data-icon="arrow-d" onclick="tuesdayText()">Tuesday</a></div>
+	</div>
+	</div>
+	
+	<div id="tuesdaytxt" style="display: none">
+ 	<p><u>Football Society - Social Event:</u></p>
+ 	<p> <u>Where:</u> Trebles </p>
+ 	<p> <u>info:</u> Every Monday Athletics hold a causal run for all types of runners, from beginners to advanced runners. On mondays we usually run 5km, through different routes.</p>
+ 	<a href="#map"><div class="mapbtn"><div class="ui-block-b"><button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" id="#map2">Map</button></div> </div></a>
+	</div>
+	
+	<div class="eventsbtn">
+   	<div class="ui-grid-b ui-responsive">
+    <div class="ui-block-a"><a href="#" class="ui-btn ui-shadow ui-corner-all" data-icon="arrow-d" onclick="wednesdayText()">Wednesday</a></div>
+	</div>
+	</div>
+	
+	<div id="wednesdaytxt" style="display: none">
+ 	<p><u>No Scheduled Events for Today</u></p>
+	</div>
+	
+	<div class="eventsbtn">
+   	<div class="ui-grid-b ui-responsive">
+    <div class="ui-block-a"><a href="#" class="ui-btn ui-shadow ui-corner-all" data-icon="arrow-d" onclick="thursdayText()">Thursday</a></div>
+	</div>
+	</div>
+	
+	<div id="thursdaytxt" style="display: none">
+ 	<p><u>Comedy Society - Social Event:</u></p>
+ 	<p> <u>Where:</u> LPAC </p>
+ 	<p> <u>When:</u> 6pm </p>
+ 	<p> <u>info:</u> Thursday is the stand up mic social, where you can have the chance ti take the stage and share your jokes! Drinks will be served, where we will head out into town afterwards</p>
+ 	<a href="#map"><div class="mapbtn"><div class="ui-block-b"><button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" id="#map3">Map</button></div> </div></a>
+	</div>
+	
+	<div class="eventsbtn">
+   	<div class="ui-grid-b ui-responsive">
+    <div class="ui-block-a"><a href="#" class="ui-btn ui-shadow ui-corner-all" data-icon="arrow-d" onclick="fridayText()">Friday</a></div>
+	</div>
+	</div>
+	
+	<div id="fridaytxt" style="display: none">
+ 	<p><u>Football Society - Training:</u></p>
+ 	<p> <u>Where:</u> Astro Turf - Sports Centre </p>
+ 	<p> <u>When:</u> 6pm </p>
+ 	<p> <u>info:</u> Training today will focus on prepartioon of our upcoming cup game this tuesday. Ensure that you turn up with all training equipment for this session</p>
+ 	<a href="#map"> <div class="mapbtn"><div class="ui-block-b"><button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" id="#map4">Map</button></div> </div></a>
+	</div>
+
+   
+</div> 
+</div>
+<!-- /page --> 
+
+<!-- Start of Notifications Page page -->
+<div data-role="page" id="notify" data-theme="b">     
+<div data-role="header">
+    <blockquote>
+		<div class="backbtn"><div class="ui-block-b"><a class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline" data-rel="back">Button</a></div></div>
+		<h1 class="ui-title" role="heading" aria-level="1">Alerts</h1>
+    </blockquote>
+  <div data-role="navbar">           
+  <ul>   
+    <li><a href="#sports" data-transition="slide" data-icon="info">Societies</a></li>                 
+  	<li><a href="#map" data-transition="slide" data-icon="navigation">Map</a></li> 
+  	<li><a href="#events" data-transition="slide" data-icon="calendar">Events</a></li>  
+  	<li><a href="#notify" data-transition="slide" data-icon="alert">Alerts</a></li>
+  </ul>         
+  	</div>     
+  	</div>     
+  	
+  	<div data-role="content">
+  	
+  	  <h1>Inbox</h1>
+        <a href="#" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
+    </div><!-- /header -->
+    <div role="main" class="ui-content">
+        <ul id="list" class="touch" data-role="listview" data-icon="false" data-split-icon="delete">
+            <li>
+                    <h3>Athletics Society</h3>
+                    <p class="topic"><strong>Causual Run Tonight</strong></p>
+                    <p> Meet at the Engine Shed at 5pm for a 5:15pm start.</p>
+                    <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+            </li>
+            
+            <li>
+                    <h3>Football Society</h3>
+                    <p class="topic"><strong>Football Social Tonight</strong></p>
+                    <p> Meet at Trebles for 8pm.</p>
+                    <p class="ui-li-aside"><strong>11:43</strong>AM</p>
+            </li>
+        </ul>
+    </div><!-- /content -->
+  	                                 
+  	</div> 
+<!-- /page --> 
+
+
+ 
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3XiX8WHDK02uucffpB7Q43KR4tFhI-KE&callback=initMap"></script>
+<script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>   
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/jqm_defaults.js"></script>   
+<script type="text/javascript" src="js/main.js"></script>
+
+<script>
+	
+function mondayText() {
+  var text = document.getElementById("mondaytxt");
+	
+  if (text.style.display === "none") {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none";
+  }
+	
+}
+
+function tuesdayText(){
+	var text2 = document.getElementById("tuesdaytxt");
+	
+    if (text2.style.display === "none") {
+    text2.style.display = "block";
+  } else {
+    text2.style.display = "none";
+  }
+}
+	
+function wednesdayText(){
+	var text3 = document.getElementById("wednesdaytxt");
+	
+    if (text3.style.display === "none") {
+    text3.style.display = "block";
+  } else {
+    text3.style.display = "none";
+  }
+}
+	
+function thursdayText(){
+	var text4 = document.getElementById("thursdaytxt");
+	
+    if (text4.style.display === "none") {
+    text4.style.display = "block";
+  } else {
+    text4.style.display = "none";
+  }
+}
+
+function fridayText(){
+	var text5 = document.getElementById("fridaytxt");
+	
+    if (text5.style.display === "none") {
+    text5.style.display = "block";
+  } else {
+    text5.style.display = "none";
+  }
+}
+	
+</script>
+
+</body>
+
+	
+</html>
