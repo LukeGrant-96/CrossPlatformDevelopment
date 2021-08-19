@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+body.online #offline{ 
+	display:none; 
+}  
+.HeaderText{
+	text-align: center;
+}
+#mapFooter{
+	text-align: center;
+}
+#loginText{
+	text-align: center;
+}	
+
+#signupText{
+	text-align: center;
+}
+
+#account{
+	margin-top: 50px;
+}
+
+#map-canvas {
+  height: 15em;
+  width: 100%;
+}
+ #markers_info .marker {
+      height: 40px;
+      cursor: pointer;
+}
+
+.eventheader{
+	text-align: center;
+}
+
+.sportText{
+	text-align: center;
+}
+.sportImg{
+	text-align: center;
+}
+.sportHeader{
+	text-align: center;
+}
+
+#list{
+	margin-top: -80px;
+}
+.backbtn{
+	margin-left: -20px;
+}
+.eventbtn{
+	text-align: center;
+}
+
+
+.eventsbtn{
+	margin-top: -40px;
+}
+.days{
+	text-align: center;
+	border:  3px solid white;
+}
+.mapbtn{
+	margin-top: -20px;
+}
